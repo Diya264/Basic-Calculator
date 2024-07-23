@@ -1,0 +1,124 @@
+/* style for body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2ebcf;
+    margin: 0;
+}
+
+/* styling for the calculator container */
+.calculator {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #c0c0c6;
+    width: 80%;
+    max-width: 250px; 
+}
+
+/* styling for display screen */
+.display_screen {
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    background-color: #555658;
+    color: white;
+    text-align: right;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 2em;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* styling for the calculator keys grid */
+.cal-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* styling for all buttons */
+button {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* hover effect for buttons */
+button:hover {
+    background-color: #b2beb5;
+}
+
+/* styling for operator buttons */
+button.operator {
+    background-color: #cce1f2;
+}
+
+/* hover effect for operator buttons */
+button.operator:hover {
+    background-color: #6bbcb1;
+}
+
+/* styling for clear(AC) button*/
+button.clear {
+    font-size: 22px;
+    background-color: #f3d2d1;
+}
+
+/* hover effect for clear(AC) button */
+button.clear:hover {
+    background-color: #E6C6C5;
+}
+
+/* styling for delete button */
+button.del_operator {
+    font-size: 22px;
+    background-color: #d6dfb9;
+}
+
+/* hover effect for delete(DEL) button */
+button.del_operator:hover {
+    background-color: #9ab69b;
+}
+
+/* styling for equal button */
+button.equal_sign_operator {
+    background-color: #ddc6c6;
+    grid-column: span 3;
+}
+
+/* hover effect for equal button */
+button.equal_sign_operator:hover {
+    background-color: #a67c8c;
+}
+
+
+/* media queries for larger screens */
+@media (min-width: 768px) {
+    .calculator {
+        width: 250px;
+    }
+}
+
+/* media queries for smaller screens */
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        height: 40px; 
+        font-size: 1em;
+    }
+
+    .display_screen {
+        font-size: 1.5em; 
+    }
+}

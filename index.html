@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!--Display screen for the calculator-->
+        <input type="text" class="display_screen" id="display_screen" disabled>
+        <div class="cal-keys">
+            <button type="button" class="clear" value="clear" onclick="clearDisplay()" >AC</button><!--Clear button to clear the whole screen-->
+            <button type="button" class = "del_operator" value="DE" onclick="deleteLast()">DE</button><!--Delete button to delete the last character-->
+            <button type="button" value="." onclick="appendDisplay('.')">.</button><!--Decimal point button-->
+            <button type="button" class="operator" value="/"onclick="appendDisplay('/')">/</button><!--Division operator button-->
+            
+            <!--Number and operator buttons-->
+            <button type="button" value="7" onclick="appendDisplay('7')">7</button>
+            <button type="button" value="8" onclick="appendDisplay('8')">8</button>
+            <button type="button" value="9" onclick="appendDisplay('9')">9</button>
+            <button type="button" class="operator" value="*" onclick="appendDisplay('*')">*</button>
+
+            <button type="button" value="4" onclick="appendDisplay('4')">4</button>
+            <button type="button" value="5" onclick="appendDisplay('5')">5</button>
+            <button type="button" value="6" onclick="appendDisplay('6')">6</button>
+            <button type="button" class="operator" value="-" onclick="appendDisplay('-')">-</button>
+            
+            <button type="button" value="1" onclick="appendDisplay('1')">1</button>
+            <button type="button" value="2" onclick="appendDisplay('2')">2</button>
+            <button type="button" value="3" onclick="appendDisplay('3')">3</button>
+            <button type="button" class="operator" value="+" onclick="appendDisplay('+')">+</button>
+
+            <button type="button" value="0" onclick="appendDisplay('0')">0</button>
+            <!--Equal button to evaluate expression-->
+            <button type="button" class="equal_sign_operator" onclick="evaluateExpression()">=</button>
+            
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
